@@ -45,17 +45,29 @@
             <h1 id="titre_achat">ACHETER LE JEU</h1>
     </header>
     <section id="produit">
-        <h1 class="titre">LE JEU THE TORIA'S LEAGUE</h1>
         <div id="fiche_produit">
           <div id="img_produit"></div>
           <div id="text_produit">
               <p>Le jeu The Toria's League</p>
               <p>Plongez dans l'univers médiéval du jeu The Toria's League et vivez une aventure</p>
+              <p>Un jeu de carte à jouer à 2, pour petits et grands. Chaque parties, d'environ 20 minutes, sauront occuper vos moments jeux et amuser tous les joueurs.</p>
             <p>Prix : 20€</p>
-            <a href="achat.html"><button id="myBtn">ACHETER</button></a>
+              <a href="#confirmation"><button>ACHETER</button></a>
           </div>
         </div>
+        <div id="confirmation">
+            <h1 class="titre">AJOUTER AU PANIER</h1>
+            <p>Combien d'exemplaire souhaitez vous ?</p>
+            <p>Le jeu The Toria's League : <span id="product_price">20 €</span></p>
+            <div id="product_quantity">
+                <input type="number" value="1" min="0">
+            </div>
+            <div id="product_price_total">20 €</div>
+            <button>CONFIRMER L'ACHAT</button>
+        </div>
     </section>
+
+
 </div>
     <footer>
         <div id="cont1">
@@ -71,11 +83,11 @@
 
 <script>
     // Get the modal
-    var modal = document.getElementById("myModal");
+    var modal = document.getElementById("confirmation");
     // Get the button that opens the modal
     var btn = document.getElementById("myBtn");
     // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    var span = document.getElementsById("fermer");
     // When the user clicks the button, open the modal
     btn.onclick = function() {
       modal.style.display = "block";
