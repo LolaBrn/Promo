@@ -39,12 +39,15 @@
     width: 45%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: left;
+    align-items: center;
 }
 
 #cart-container {
     width: auto;
     position: relative;
+    margin-right: 25px;
+    margin-left: 25px;
 }
 
 #itemCount {
@@ -68,4 +71,8 @@ i:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+#acheter {
+    width: 25%;
+    margin: 20px;
 }

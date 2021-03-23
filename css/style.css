@@ -300,7 +300,7 @@ button {
 }
 button:hover{
   padding: 12px 25px 12px 25px;
-	box-shadow: inset 120px 0 #56b91f;
+	box-shadow: inset 300px 0 #56b91f;
   height: auto;
 }
 #contenu1{
