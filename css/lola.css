@@ -1,0 +1,17 @@
+#cgu, #cgv {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+}
+
+#illu{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#illu_achat {
+    align-items: center;
+    width: 50%;
+}
