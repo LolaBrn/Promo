@@ -1,7 +1,10 @@
-#cgu, #cgv {
+#cgu, #cgv, #poli {
     margin-left: 100px;
     margin-right: 100px;
-    margin-top: 50px;
+    margin-top: 75px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    border-radius: 25px;
 }
 
 #illu{
