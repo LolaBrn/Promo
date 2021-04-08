@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <title>Site promotionnel The Toria's League</title>
-    <link rel="icon" type="image/x-icon" href="img/logo_jeu.png">
+    <link rel="icon" type="image/x-icon" href="img/logo_jeu.ico">
     <meta name="description" content="Site dédié à la promotion de notre nouveau jeu de carte The Toria's League, disponible également en ligne">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="css/plateau.css">
     <link rel="stylesheet" type="text/css" href="css/footer.css">
     <link rel="stylesheet" type="text/css" href="css/raph.css">
+    <link rel="stylesheet" type="text/css" href="css/lola.css">
 </head>
 <body>
 <div id="main">
@@ -73,7 +74,7 @@
         <section id="regles">
             <h1 class="titre">VIDEO DES REGLES DU JEU</h1>
             <div id="video_regles">
-                <video class="vid" src="video/video0.mov" autoplay muted></video>
+                <iframe width="80%" height="700px" src="https://www.youtube.com/embed/eziIKDv6qcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </section>
         <section id="jeu">
@@ -300,7 +301,10 @@
        </section>
        
 </div>
-
+<div id="cookieConsent">
+    <div id="closeCookieConsent">x</div>
+    This website is using cookies. <a href="#" target="_blank">More info</a>. <a class="cookieConsentOK">That's Fine</a>
+</div>
 <footer>
         <div id="cont1">
             <img src="img/logo_agence_blanc.png">
@@ -379,6 +383,14 @@
 
             })//FIN AJAX
         }//FIN ENVOI FORMULAIRE
+    $(document).ready(function(){
+        setTimeout(function () {
+            $("#cookieConsent").fadeIn(200);
+        }, 4000);
+        $("#closeCookieConsent, .cookieConsentOK").click(function() {
+            $("#cookieConsent").fadeOut(200);
+        });
+    });
 </script>
 </body>
 </html>

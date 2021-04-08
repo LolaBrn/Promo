@@ -68,6 +68,41 @@
                 <button id="acheter">ACHETER</button>
             </div>
         </div>
+        <div id="form_achat">
+            <form action="/validation_achat.php" method="post">
+                <div>
+                    <label for="lastname">Nom :</label>
+                    <input type="text" id="lastname" name="lastname">
+                </div>
+                <div>
+                    <label for="name">Prénom :</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div>
+                    <label for="email">e-mail :</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div>
+                    <label for="adresse">Adresse :</label>
+                    <input type="text" id="adresse" name="adresse"></input>
+                </div>
+                <div>
+                    <label for="cp">Code postal :</label>
+                    <input type="number" id="cp" name="cp">
+                </div>
+                <div>
+                    <label for="ville">Ville :</label>
+                    <input type="text" id="ville" name="ville">
+                </div>
+                <p>Moyen de Payement :</p>
+                <div>
+                    <input type="checkbox" name="cb" id="cb" value="carte banquaire">
+                    <label for="cb">Carte banquaire</label>
+                    <input type="checkbox" name="paypal" id="paypal" value="Paypal">
+                    <label for="paypal">Paypal</label>
+                </div>
+            </form>
+        </div>
     </section>
     <div id="illu">
         <img id="illu_achat" src="img/illu.png">
