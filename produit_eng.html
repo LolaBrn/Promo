@@ -65,10 +65,48 @@
                     </div>
                     <button class="clear">EMPTY CART</button>
                 </div>
+                <p>Total : <span id="total"></span> €</p>
                 <button id="acheter">BUY</button>
             </div>
         </div>
+        <div id="form_achat">
+            <form>
+                <div>
+                    <label for="lastname">Last Name :</label>
+                    <input type="text" id="lastname" name="lastname">
+                </div>
+                <div>
+                    <label for="name">First Name :</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div>
+                    <label for="email">e-mail :</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div>
+                    <label for="adresse">Address :</label>
+                    <input type="text" id="adresse" name="adresse">
+                </div>
+                <div>
+                    <label for="cp">Zip code :</label>
+                    <input type="number" id="cp" name="cp">
+                </div>
+                <div>
+                    <label for="ville">City :</label>
+                    <input type="text" id="ville" name="ville">
+                </div>
+                <p>Payment method :</p>
+                <div>
+                    <input type="checkbox" name="cb" id="cb" value="carte banquaire">
+                    <label for="cb">Bank card</label>
+                    <input type="checkbox" name="paypal" id="paypal" value="Paypal">
+                    <label for="paypal">Paypal</label>
+                </div>
+            </form>
+            <button id="confirmation_achat">CONFIRM ORDER</button>
+        </div>
     </section>
+    <p id="message_conf">Thank you for your order</p>
     <div id="illu">
         <img id="illu_achat" src="img/illu.png">
     </div>
@@ -79,8 +117,8 @@
         <img src="img/logo_agence_blanc.png">
         <img src="img/logo_jeu.png">
         <div>
-            <a href="politique.html">Politique de confidentialité</a><br>
-            <a href="conditions.html">CGU | CGV</a><br>
+            <a href="politique.html">Privacy policy</a><br>
+            <a href="conditions.html">General terms and conditions</a><br>
             <a href="https://mmi19g01.mmi-troyes.fr/Irogames/">Who are we ?</a><br>
         </div>
     </div>
@@ -88,17 +126,45 @@
 
 <script>
     var itemCount = 0;
+    var itemPrice = 20;
+    var total = itemCount * itemPrice;
 
     $('.add').click(function (){
         itemCount ++;
         $('#itemCount').html(itemCount).css('display', 'block');
+        total = itemPrice * itemCount;
+        $('#total').html(total).css('display', 'contents');
     });
 
     $('.clear').click(function() {
         itemCount = 0;
+        total = itemPrice * itemCount;
         $('#itemCount').html('').css('display', 'none');
-        $('#cartItems').html('');
+        $('#total').html(total);
     });
+    $(document).ready(function () {
+        $('#form_achat').hide();
+        $('#message_conf').hide();
+        $('#total').html(total);
+    })
+    $('#acheter').click(function () {
+        $('#form_achat').show();
+    })
+    $('#confirmation_achat').click(function () {
+        $('#form_achat').hide();
+        $('#message_conf').show();
+        itemCount = 0;
+        total = 0;
+        total = itemPrice * itemCount;
+        $('#itemCount').html('').css('display', 'none');
+        $('#total').html(total);
+    })
+    $('.add').click(function () {
+        $('#message_conf').hide();
+    })
+    $('.clear').click(function () {
+        $('#message_conf').hide();
+    })
 
 </script>
 </body>
