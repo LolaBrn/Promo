@@ -29,10 +29,8 @@
     width: 100%;
 }
 
-#img_produit{
-    background-color: whitesmoke;
+#img_produit img{
     width: 300px;
-    height: 400px;
 }
 
 #text_produit{
