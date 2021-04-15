@@ -26,11 +26,20 @@
     justify-content: space-around;
     align-items: center;
     height: 500px;
-    width: 100%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-#img_produit img{
-    width: 300px;
+#img_produit{
+    width: 45%;
+}
+#carouselExampleIndicators {
+    width: 60%;
+}
+
+#btn_carousel1, #btn_carousel2, #btn_carousel3, #btn_carousel4, #btn_carousel5{
+
 }
 
 #text_produit{
@@ -87,4 +96,20 @@ i:hover {
     text-align: center;
     color: gold;
     font-size: 20px;
+}
+
+
+.clear, .add, #acheter{
+    background-color: #42A00E;
+    border: none;
+    height: auto;
+    padding: 15px 25px 15px 25px;
+    color: white;
+    font-family: 'aventura';
+    transition: all 0.3s ease;
+}
+.clear:hover, .add:hover, #acheter:hover{
+    padding: 20px 30px 20px 30px;
+    box-shadow: inset 300px 0 #56b91f;
+    height: auto;
 }

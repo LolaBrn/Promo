@@ -286,7 +286,7 @@ nav {
 #contenu a{
   text-align: center;
 }
-button {
+#myBtn {
     background-color: #42A00E;
     border: none;
     height: auto;
@@ -296,7 +296,7 @@ button {
     transition: all 0.3s ease;
 
 }
-button:hover{
+#myBtn:hover{
   padding: 12px 25px 12px 25px;
 	box-shadow: inset 300px 0 #56b91f;
   height: auto;
