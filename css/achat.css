@@ -76,3 +76,17 @@ i:hover {
     width: 25%;
     margin: 20px;
 }
+
+#form_achat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.5);
+    padding: 20px;
+}
+#message_conf{
+    text-align: center;
+    color: gold;
+    font-size: 20px;
+}
