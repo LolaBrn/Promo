@@ -91,6 +91,19 @@ i:hover {
     align-items: center;
     background-color: rgba(0,0,0,0.5);
     padding: 20px;
+    width: 100%;
+}
+#form_achat form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#form_achat form div{
+    width: 22%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 #message_conf{
     text-align: center;
@@ -99,7 +112,7 @@ i:hover {
 }
 
 
-.clear, .add, #acheter{
+.clear, .add, #acheter, #confirmation_achat{
     background-color: #42A00E;
     border: none;
     height: auto;
